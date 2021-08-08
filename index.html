@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calmio - Meditation App</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <img src="assets/logo.svg" alt="logo" class="logo" />
+    <div class="input">
+      <label>Select Breaths</label>
+      <select class="breath-input">
+        <option value="3">3 Breaths</option>
+        <option value="5">5 Breaths</option>
+        <option value="7">7 Breaths</option>
+      </select>
+    </div>
+    <!-- Circle visual -->
+    <div class="circle-wrap">
+      <div class="circle-outline"></div>
+      <div class="circle-progress"></div>
+    </div>
+    <!-- Status -->
+    <p class="breaths">Breaths Remaining <span class="breaths-text">3</span></p>
+    <p class="instructions">Are you ready to start breathing?</p>
+
+    <!-- button -->
+    <button class="start" style="vertical-align: middle"><span>Breathe </span></button>
+
+    <!-- background video -->
+    <video src="assets/bg_video_360P.mp4" class="background" playsinline autoplay muted loop>
+      Video is not supported on your browser
+    </video>
+    <!-- background audio -->
+    <audio id="myAudio" loop>
+      <source src="assets/bg_audio.mp3" type="audio/mp3" />
+      Your browser does not support the audio element.
+    </audio>
+
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
