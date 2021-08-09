@@ -33,10 +33,10 @@ body::after {
   overflow: hidden;
 }
 
-video {
-  min-height: 100vh;
+iframe {
+  min-height: 120vh;
   position: absolute;
-  min-width: 100vw;
+  width: 100vw;
   z-index: -10;
   background-size: cover;
 }
