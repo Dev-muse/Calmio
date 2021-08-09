@@ -1,3 +1,14 @@
+// autoplay sound
+navigator.mediaDevices.getUserMedia({ audio: true }).then(function (stream) {
+  let bgSound = document.getElementById("myAudio");
+  bgSound.play();
+
+  // stop microphone stream acquired by getUserMedia
+  stream.getTracks().forEach(function (track) {
+    track.stop();
+  });
+});
+
 // selecting DOM elements
 const circleProgress = document.querySelector(".circle-progress");
 const numOfBreaths = document.querySelector(".breath-input");
@@ -42,6 +53,11 @@ const breathingApp = () => {
   const breathingAnimation = setInterval(() => {
     if (breathsLeft === 0) {
       clearInterval(breathingAnimation);
+      instructions.innerText =
+        "Ok great job! , how do you feel?, relaxed ?. Click begin to start a new session";
+      start.classList.remove("button-inactive");
+      breathsLeft = numOfBreaths.value;
+      breathsText.innerText = breathsLeft;
       return;
     } else {
       growCircle();

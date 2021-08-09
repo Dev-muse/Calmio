@@ -1,5 +1,9 @@
 @import url("https://use.typekit.net/tak4erx.css");
 
+:root {
+  --theme-color: #4814c0;
+}
+
 *,
 *::before,
 *::after {
@@ -34,9 +38,9 @@ body::after {
 }
 
 iframe {
-  min-height: 120vh;
+  height: 100vh;
   position: absolute;
-  width: 100vw;
+  width: 150vw;
   z-index: -10;
   background-size: cover;
 }
@@ -44,8 +48,8 @@ iframe {
 .logo {
   width: 200px;
   height: 50px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .input {
@@ -66,7 +70,7 @@ iframe {
   min-width: 300px;
   font-size: 16px;
   padding: 8px 4px;
-  background-color: #51639c;
+  background-color: var(--theme-color);
   color: #fff;
   border-radius: 8px;
   -webkit-border-radius: 8px;
@@ -102,7 +106,7 @@ iframe {
   width: 50px;
   height: 50px;
   position: absolute;
-  background-color: #51639c;
+  background-color: var(--theme-color);
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -134,10 +138,11 @@ iframe {
 }
 
 button {
-  background-color: #51639c;
+  background-color: var(--theme-color);
   color: #fff;
   outline: none;
   border: none;
+  margin-bottom: 45px;
   padding: 8px 20px;
   border-radius: 8px;
   -webkit-border-radius: 8px;
@@ -153,9 +158,10 @@ button {
   -ms-transition: 2s all ease;
   -o-transition: 2s all ease;
 }
+
 button:hover {
   background-color: #fff;
-  color: #51639c;
+  color: var(--theme-color);
 }
 
 .button-inactive {
