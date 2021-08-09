@@ -38,11 +38,12 @@ body::after {
 }
 
 iframe {
-  height: 100vh;
+  height: 120vh;
   position: absolute;
-  width: 150vw;
+  width: 120vw;
   z-index: -10;
   background-size: cover;
+  border: 0;
 }
 
 .logo {
